@@ -1,35 +1,21 @@
-# dc-dc-converter-simulation.
+# Microcontroller-Based 4-in-1 Hybrid Power Converter System
 
-A comprehensive collection of power electronics circuit designs, simulations, and experimental documentation focusing on modern energy conversion systems, power converters, and control strategies.
+![Circuit Diagram](hybrid_power_converter.png)
 
----
+## Overview
+This project presents a multi-stage **Unified 4-in-1 Hybrid Power Converter Architecture** controlled by a single Microcontroller (MCU). The system integrates four essential power electronic stages—AC-DC rectification, DC-DC buck conversion, DC-AC pure sine wave inversion, and AC-AC phase chopping—into a single modular setup.
 
-## 📌 Key Focus Areas
-* **Power Conversion Topologies:** Buck, Boost, Buck-Boost, and Multilevel Inverters.
-* **Simulation & Modeling:** Circuit modeling using MATLAB/Simulink and Proteus.
-* **Control Strategies:** PWM Signal Generation, Closed-loop Feedback Control, and MPPT algorithms.
-* **Applications:** Renewable energy integration (Solar PV), Motor Drives, and Smart Grid applications.
+Designed for smart grid integration, hybrid solar systems, and power electronics research, this setup replaces multiple standalone converters with a unified hardware topology and firmware-driven signal generation.
 
 ---
 
-## 🛠️ Tools & Technologies
-* **Simulation Software:** MATLAB / Simulink, PSIM, Proteus
-* **Hardware / Microcontrollers:** Arduino / STM32 / DSP Controllers for PWM generation
-* **Hardware Components:** MOSFETs, IGBTs, Gate Driver ICs, Inductors, High-Frequency Transformers
+## Key Features
+- **4 Conversion Stages in 1 System:** Handles AC-DC, DC-DC, DC-AC, and AC-AC conversions simultaneously.
+- **Single MCU Orchestration:** Generates PWM, SPWM, SCR trigger, and TRIAC phase-cut signals from a single microcontroller.
+- **Galvanic Isolation:** Uses optocouplers (MOC3021) and isolated gate drivers (IR2110) to protect digital control circuits from high-voltage transients.
+- **Pure Sine Wave Output:** High-efficiency IGBT H-Bridge driven by SPWM with LC filtering for low THD AC load operation.
+- **Automated Visualization:** Includes Python-Graphviz scripts to auto-generate system block diagrams and signal flow topologies.
 
 ---
 
-## ⚙️ Projects Included
-1. **DC-DC Converter Design & Simulation:**
-   - Closed-loop Buck/Boost converter design with high efficiency.
-2. **Inverter & Motor Drive Control:**
-   - Single-phase / Three-phase PWM inverter control.
-3. **Renewable Energy Interface:**
-   - Maximum Power Point Tracking (MPPT) for Solar PV systems.
-
----
-
-## 🚀 How to Run Simulations
-1. Clone this repository:
-   ```bash
-   git clone [https://github.com/your-username/advanced-power-electronics-projects.git](https://github.com/your-username/advanced-power-electronics-projects.git)
+## System Architecture & Topology
